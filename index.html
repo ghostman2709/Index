@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -22,15 +21,11 @@
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
-    h1 {
-      font-size: 3em;
-      color: #f39c12;
-      margin-bottom: 0.4em;
-    }
     img {
-      max-width: 300px;
+      display: block;
+      margin: 0 auto 30px auto;
+      max-width: 320px;
       border-radius: 12px;
-      margin-bottom: 20px;
       box-shadow: 0 0 12px rgba(0,0,0,0.4);
     }
     p.description {
@@ -93,7 +88,6 @@
 <body>
 
   <div class="container">
-    <h1>Hyper Foco</h1>
     <img src="file_0000000049a461f7bde1e7b9cde34561.png" alt="Capa do eBook Hyper Foco" />
 
     <blockquote>“Você se torna aquilo que pensa a maior parte do tempo.” – Earl Nightingale</blockquote>
@@ -117,7 +111,7 @@
 
     <p class="price">R$ 19,99</p>
 
-    <a class="buy-btn" href="https://pay.kiwify.com.br/9lRqCTY?fbclid=PAQ0xDSwLLlaBleHRuA2FlbQIxMAABp5v9EHIm5rTjGfQJMMkWxn_XuB9v9fzVXTYt0gp8l12qm1OjFis0ncJn3lcX_aem_qdraWQrBer9X2BWt3b2zhw" target="_blank">Comprar Agora</a>
+    <a class="buy-btn" href="https://pay.kiwify.com.br/9lRqCTY" target="_blank">Comprar Agora</a>
     <a class="zap-btn" href="https://wa.me/5555996043937" target="_blank">Falar no WhatsApp</a>
     <br />
     <button id="btnSom">Ativar Som</button>
@@ -137,9 +131,13 @@
     const botaoSom = document.getElementById('btnSom');
 
     botaoSom.addEventListener('click', () => {
-      audio.muted = false;
-      audio.volume = 1;
-      botaoSom.style.display = 'none';
+      audio.play().then(() => {
+        audio.muted = false;
+        audio.volume = 1;
+        botaoSom.style.display = 'none';
+      }).catch(() => {
+        alert("Clique novamente para ativar o áudio.");
+      });
     });
   </script>
 
