@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hyper Foco - O Poder de 1 Minuto por Dia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    h1 {
+      font-size: 3em;
+      color: #f39c12;
+      margin-bottom: 0.4em;
+    }
+    img {
+      max-width: 300px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    }
+    p.description {
+      font-size: 1.25em;
+      line-height: 1.6;
+      margin-bottom: 2em;
+    }
+    .price {
+      font-size: 2em;
+      color: #2ecc71;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .buy-btn, #btnSom, .zap-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .buy-btn {
+      background-color: #e67e22;
+      color: #fff;
+    }
+    .buy-btn:hover {
+      background-color: #cf711c;
+    }
+    #btnSom {
+      background-color: #2980b9;
+      color: #fff;
+    }
+    #btnSom:hover {
+      background-color: #1f5f88;
+    }
+    .zap-btn {
+      background-color: #25D366;
+      color: #fff;
+    }
+    .zap-btn:hover {
+      background-color: #1ebe5d;
+    }
+    blockquote {
+      font-size: 1.2em;
+      font-style: italic;
+      margin: 20px auto;
+      max-width: 700px;
+      color: #f1c40f;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hyper Foco</h1>
+    <img src="file_0000000049a461f7bde1e7b9cde34561.png" alt="Capa do eBook Hyper Foco" />
+
+    <blockquote>“Você se torna aquilo que pensa a maior parte do tempo.” – Earl Nightingale</blockquote>
+    <blockquote>“O sucesso é construído com foco, fé e ação.”</blockquote>
+    <blockquote>“O universo responde à sua vibração, não às suas palavras.”</blockquote>
+
+    <p class="description">
+      O eBook <strong>Hyper Foco</strong> é uma obra transformadora para quem deseja desbloquear seu verdadeiro potencial mental e espiritual com apenas 1 minuto de prática por dia.<br><br>
+      Nele você encontrará:
+      <ul style="text-align: left; max-width: 700px; margin: 0 auto; font-size: 1.1em; line-height: 1.6;">
+        <li>📌 Técnicas de autosugestão e visualização criativa</li>
+        <li>📌 Princípios das 48 Leis do Poder aplicados à mente</li>
+        <li>📌 Lições práticas da Lei da Atração e das 7 Leis Universais</li>
+        <li>📌 Disciplina mental para alcançar riqueza e clareza</li>
+        <li>📌 Exercícios diários de foco e programação subconsciente</li>
+        <li>📌 Capítulos curtos, profundos e impactantes</li>
+      </ul>
+      <br>
+      Transforme sua mente e seus resultados. Comece hoje com apenas R$ 19,99.
+    </p>
+
+    <p class="price">R$ 19,99</p>
+
+    <a class="buy-btn" href="https://pay.kiwify.com.br/9lRqCTY?fbclid=PAQ0xDSwLLlaBleHRuA2FlbQIxMAABp5v9EHIm5rTjGfQJMMkWxn_XuB9v9fzVXTYt0gp8l12qm1OjFis0ncJn3lcX_aem_qdraWQrBer9X2BWt3b2zhw" target="_blank">Comprar Agora</a>
+    <a class="zap-btn" href="https://wa.me/5555996043937" target="_blank">Falar no WhatsApp</a>
+    <br />
+    <button id="btnSom">Ativar Som</button>
+  </div>
+
+  <audio id="audioVendas" autoplay muted loop>
+    <source src="audio.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <footer>
+    © 2025 Hyper Foco • Criado por Érico Mendieta
+  </footer>
+
+  <script>
+    const audio = document.getElementById('audioVendas');
+    const botaoSom = document.getElementById('btnSom');
+
+    botaoSom.addEventListener('click', () => {
+      audio.muted = false;
+      audio.volume = 1;
+      botaoSom.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
