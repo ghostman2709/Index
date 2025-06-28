@@ -1,145 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hyper Foco - O Poder de 1 Minuto por Dia</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 850px;
-      margin: 0 auto;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    }
-    img {
-      display: block;
-      margin: 0 auto 30px auto;
-      max-width: 320px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.4);
-    }
-    p.description {
-      font-size: 1.25em;
-      line-height: 1.6;
-      margin-bottom: 2em;
-    }
-    .price {
-      font-size: 2em;
-      color: #2ecc71;
-      margin-bottom: 30px;
-      font-weight: bold;
-    }
-    .buy-btn, #btnSom, .zap-btn {
-      display: inline-block;
-      padding: 15px 30px;
-      font-size: 1.1em;
-      margin: 10px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-    .buy-btn {
-      background-color: #e67e22;
-      color: #fff;
-    }
-    .buy-btn:hover {
-      background-color: #cf711c;
-    }
-    #btnSom {
-      background-color: #2980b9;
-      color: #fff;
-    }
-    #btnSom:hover {
-      background-color: #1f5f88;
-    }
-    .zap-btn {
-      background-color: #25D366;
-      color: #fff;
-    }
-    .zap-btn:hover {
-      background-color: #1ebe5d;
-    }
-    blockquote {
-      font-size: 1.2em;
-      font-style: italic;
-      margin: 20px auto;
-      max-width: 700px;
-      color: #f1c40f;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #bbb;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Método Hyper-F – Transforme Seu Foco e Sua Vida</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2 {
+    color: #00aaff;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+  }
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  blockquote {
+    font-style: italic;
+    color: #99ccff;
+    border-left: 4px solid #00aaff;
+    padding-left: 15px;
+    margin: 20px 0;
+  }
+  a.button {
+    display: block;
+    width: 100%;
+    background: #00aaff;
+    color: #121212;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 15px 0;
+    margin: 30px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease;
+  }
+  a.button:hover {
+    background: #0088cc;
+  }
+  .bonus-list, .features-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .bonus-list li, .features-list li {
+    background: #222;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 6px;
+  }
+  .guarantee {
+    background: #004466;
+    color: #ccf5ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  /* WhatsApp button */
+  .whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .whatsapp-button:hover {
+    background-color: #1ebe57;
+  }
+  .whatsapp-button svg {
+    fill: white;
+    width: 30px;
+    height: 30px;
+  }
+  /* Audio player style */
+  audio {
+    display: block;
+    margin: 20px auto 40px auto;
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+  }
+</style>
 </head>
 <body>
-
   <div class="container">
-    <img src="file_0000000049a461f7bde1e7b9cde34561.png" alt="Capa do eBook Hyper Foco" />
+    <h1>Método Hyper-F</h1>
+    <h2>Transforme Seu Foco e Sua Vida</h2>
+    <p>Domine sua mente, controle seu tempo e alcance resultados extraordinários. O foco que transforma sonhos em realidade começa aqui.</p>
 
-    <blockquote>“Você se torna aquilo que pensa a maior parte do tempo.” – Earl Nightingale</blockquote>
-    <blockquote>“O sucesso é construído com foco, fé e ação.”</blockquote>
-    <blockquote>“O universo responde à sua vibração, não às suas palavras.”</blockquote>
+    <audio controls preload="auto" autoplay loop muted>
+      <source src="audio.mp3" type="audio/mpeg" />
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
 
-    <p class="description">
-      O eBook <strong>Hyper Foco</strong> é uma obra transformadora para quem deseja desbloquear seu verdadeiro potencial mental e espiritual com apenas 10 minutos de prática por dia.<br><br>
-      Nele você encontrará:
-      <ul style="text-align: left; max-width: 700px; margin: 0 auto; font-size: 1.1em; line-height: 1.6;">
-        <li>📌 Técnicas de autosugestão e visualização criativa</li>
-        <li>📌 Princípios das 48 Leis do Poder aplicados à mente</li>
-        <li>📌 Lições práticas da Lei da Atração e das 7 Leis Universais</li>
-        <li>📌 Disciplina mental para alcançar riqueza e clareza</li>
-        <li>📌 Exercícios diários de foco e programação subconsciente</li>
-        <li>📌 Capítulos curtos, profundos e impactantes</li>
-      </ul>
-      <br>
-      Transforme sua mente e seus resultados. Comece hoje com apenas R$ 19,99.
-    </p>
+    <h2>Por que o Método Hyper-F é para você?</h2>
+    <p>Você sente que falta foco e disciplina no dia a dia?</p>
+    <p>Já tentou mudar hábitos, mas não consegue manter a consistência?</p>
+    <p>Quer agir com clareza, superar o medo e atrair o sucesso?</p>
+    <p>Deseja transformar seus pensamentos em ações concretas e poderosas?</p>
+    <p>Se sua resposta foi “sim” para alguma dessas perguntas, o <strong>Método Hyper-F</strong> foi criado especialmente para você.</p>
 
-    <p class="price">R$ 25,00</p>
+    <h2>O que você vai aprender?</h2>
+    <ul class="features-list">
+      <li>Como despertar a fé inabalável e manter a motivação acesa</li>
+      <li>A fórmula da Lei da Atração aplicada ao seu cotidiano</li>
+      <li>Estratégias para agir em direção aos seus objetivos com ação massiva</li>
+      <li>Técnicas para controlar seu tempo e o ambiente mental para máxima produtividade</li>
+      <li>Como construir uma mente mestra que impulsiona seu crescimento</li>
+      <li>E muito mais — tudo baseado em ciência, histórias reais e métodos comprovados.</li>
+    </ul>
 
-    <a class="buy-btn" href="https://pay.kiwify.com.br/9lRqCTY" target="_blank">Comprar Agora</a>
-    <a class="zap-btn" href="https://wa.me/5555996043937" target="_blank">Falar no WhatsApp</a>
-    <br />
-    <button id="btnSom">Ativar Som</button>
+    <h2>Benefícios que você terá</h2>
+    <ul class="bonus-list">
+      <li>Mais clareza e foco para decisões importantes</li>
+      <li>Energia e disciplina para agir todos os dias</li>
+      <li>Redução do estresse com controle do ambiente e da mente</li>
+      <li>Crescimento contínuo em todas as áreas da vida</li>
+      <li>Resultados rápidos e duradouros com exercícios práticos</li>
+      <li>Suporte e comunidade para compartilhar conquistas</li>
+    </ul>
+
+    <h2>O que dizem quem já usou</h2>
+    <blockquote>“O Método Hyper-F mudou completamente minha forma de pensar e agir. Hoje sou muito mais produtivo e confiante!” — Lucas M.</blockquote>
+    <blockquote>“Nunca pensei que pudesse manter o foco por tanto tempo. As técnicas são práticas e transformadoras.” — Ana P.</blockquote>
+
+    <a href="#" class="button">Garanta já sua vaga no Método Hyper-F!</a>
+
+    <h2>Bônus exclusivos</h2>
+    <ul class="bonus-list">
+      <li>Acesso a áudios de frequência para estimular seu foco</li>
+      <li>Exercícios guiados para aplicar todos os conceitos no dia a dia</li>
+      <li>Grupo exclusivo para troca de experiências e motivação</li>
+    </ul>
+
+    <div class="guarantee">
+      Garantia de satisfação: Se em 7 dias você não sentir a transformação, devolvemos seu investimento. Sem burocracia.
+    </div>
   </div>
 
-  <audio id="audioVendas" autoplay muted loop>
-    <source src="audio.mp3" type="audio/mpeg" />
-    Seu navegador não suporta áudio.
-  </audio>
-
-  <footer>
-    © 2025 Hyper Foco • Criado por Érico Mendieta
-  </footer>
-
-  <script>
-    const audio = document.getElementById('audioVendas');
-    const botaoSom = document.getElementById('btnSom');
-
-    botaoSom.addEventListener('click', () => {
-      audio.play().then(() => {
-        audio.muted = false;
-        audio.volume = 1;
-        botaoSom.style.display = 'none';
-      }).catch(() => {
-        alert("Clique novamente para ativar o áudio.");
-      });
-    });
-  </script>
-
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/5555996043937?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Método%20Hyper-F." target="_blank" class="whatsapp-button" aria-label="Contato WhatsApp">
+    <svg viewBox="0 0 24 24" >
+      <path d="M20.52 3.48a11.78 11.78 0 0 0-16.66 0 11.95 11.95 0 0 0-3.16 8.48c0 2.22.59 4.4 1.71 6.3L2 22l4.03-1.32a11.93 11.93 0 0 0 6.43 1.87h.01c6.5 0 11.78-5.28 11.78-11.79a11.67 11.67 0 0 0-3.73-8.27Zm-8.32 15.24a9.46 9.46 0 0 1-5.11-1.48l-.37-.22-3.01.99 1.01-2.94-.24-.38a9.5 9.5 0 0 1 1.61-12.92 9.6 9.6 0 0 1 13.56 13.57 9.46 9.46 0 0 1-6.44 2.39Zm5.45-6.75c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.34.22-.63.08-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.48-1.77-1.65-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.21-.24-.58-.48-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.8.37-.28.3-1.07 1.04-1.07 2.54s1.1 2.95 1.25 3.15c.15.2 2.17 3.31 5.26 4.64.74.32 1.31.51 1.76.65.74.23 1.42.2 1.96.12.6-.1 1.77-.72 2.02-1.41.24-.69.24-1.28.17-1.41-.07-.13-.27-.2-.57-.35Z"/>
+    </svg>
+  </a>
 </body>
 </html>
