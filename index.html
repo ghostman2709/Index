@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Método Hyper-F – Página Oficial</title>
+  <title>Método Hyper-F – Transforme Seu Foco e Sua Vida</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -61,39 +61,6 @@
       font-weight: bold;
       margin-top: 40px;
     }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .whatsapp-button:hover {
-      background-color: #1ebe57;
-    }
-    .whatsapp-button svg {
-      fill: white;
-      width: 30px;
-      height: 30px;
-    }
-    audio {
-      display: block;
-      margin: 20px auto 40px auto;
-      width: 100%;
-      max-width: 400px;
-      outline: none;
-    }
-
-    /* Botão com animação de arco-íris */
     .rainbow-button {
       display: block;
       width: 100%;
@@ -119,89 +86,119 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebe57;
+    }
+    .whatsapp-button svg {
+      fill: white;
+      width: 30px;
+      height: 30px;
+    }
+    audio {
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Método Hyper-F</h1>
 
-    <p>Domine sua mente, controle seu tempo e alcance resultados extraordinários. O foco que transforma sonhos em realidade começa aqui.</p>
+    <p><em>Antes de ler, aperte o play. Este som vai sintonizar sua mente com a energia do método.  
+    Deixe a vibração preparar você para a transformação.</em></p>
 
-    <audio controls preload="auto" autoplay loop muted>
+    <!-- Áudio oculto com autoplay ativado ao rolar -->
+    <audio id="audio" autoplay loop>
       <source src="audio.mp3" type="audio/mpeg" />
-      Seu navegador não suporta o elemento de áudio.
+      Seu navegador não suporta áudio.
     </audio>
 
     <h2>Por que o Método Hyper-F é para você?</h2>
     <p>Você sente que falta foco e disciplina no dia a dia?</p>
     <p>Já tentou mudar hábitos, mas não consegue manter a consistência?</p>
     <p>Quer agir com clareza, superar o medo e atrair o sucesso?</p>
-    <p>Deseja transformar seus pensamentos em ações concretas e poderosas?</p>
     <p>Se sua resposta foi “sim”, o <strong>Método Hyper-F</strong> foi criado especialmente para você.</p>
 
     <h2>O que você vai aprender?</h2>
     <ul class="features-list">
       <li>Como despertar a fé inabalável e manter a motivação acesa</li>
       <li>A fórmula da Lei da Atração aplicada ao seu cotidiano</li>
-      <li>Estratégias para agir em direção aos seus objetivos com ação massiva</li>
-      <li>Técnicas para controlar seu tempo e o ambiente mental para máxima produtividade</li>
-      <li>Como construir uma mente mestra que impulsiona seu crescimento</li>
+      <li>Estratégias para agir com ação massiva rumo aos seus objetivos</li>
+      <li>Técnicas para controlar seu tempo e seu ambiente mental</li>
     </ul>
 
     <h2>Benefícios que você terá</h2>
     <ul class="bonus-list">
       <li>Mais clareza e foco para decisões importantes</li>
       <li>Energia e disciplina para agir todos os dias</li>
-      <li>Redução do estresse com controle do ambiente e da mente</li>
-      <li>Crescimento contínuo em todas as áreas da vida</li>
-      <li>Resultados rápidos e duradouros com exercícios práticos</li>
+      <li>Redução do estresse com controle da mente</li>
+      <li>Crescimento constante com exercícios práticos</li>
     </ul>
 
-    <h2>O que dizem quem já usou</h2>
-    <blockquote>“O Método Hyper-F mudou completamente minha forma de pensar e agir. Hoje sou muito mais produtivo e confiante!” — Lucas M.</blockquote>
-    <blockquote>“Nunca pensei que pudesse manter o foco por tanto tempo. As técnicas são práticas e transformadoras.” — Ana P.</blockquote>
+    <h2>O que dizem sobre o método</h2>
+    <blockquote>“O Método Hyper-F mudou minha forma de pensar. Hoje sou muito mais produtivo!” — Lucas M.</blockquote>
+    <blockquote>“Nunca consegui manter o foco por tanto tempo. As técnicas são transformadoras.” — Ana P.</blockquote>
 
-    <!-- Botão de compra com efeito arco-íris -->
     <a href="https://pay.kiwify.com.br/9lRqCTY" class="rainbow-button" target="_blank">
       Clique aqui para finalizar a compra do Método Hyper-F
     </a>
 
-    <h2>Bônus exclusivos</h2>
-    <ul class="bonus-list">
-      <li>Acesso a áudios de frequência para estimular seu foco</li>
-      <li>Exercícios guiados para aplicar todos os conceitos no dia a dia</li>
-      <li>Grupo exclusivo para troca de experiências e motivação</li>
-    </ul>
-
-    <!-- Nova seção Grupo VIP -->
     <h2>Grupo VIP Hyper-F – Alta Performance e Foco Extremo</h2>
     <p>Ao adquirir o Método Hyper-F, você terá acesso ao nosso <strong>Grupo VIP exclusivo</strong>, onde a transformação acontece todos os dias.</p>
 
     <ul class="bonus-list">
-      <li>✅ Compartilhamento de metas e resultados diários</li>
-      <li>✅ Rotinas de foco, treino e disciplina com a comunidade</li>
-      <li>✅ Dicas de alimentação, treinos e bem-estar</li>
-      <li>✅ Playlists, trilhas sonoras e sons binaurais para concentração</li>
-      <li>✅ Missões semanais e desafios para manter a energia elevada</li>
-      <li>✅ Acesso direto ao autor do método e a uma comunidade focada</li>
+      <li>✅ Metas e resultados diários compartilhados com a comunidade</li>
+      <li>✅ Dicas de treinos, alimentação e bem-estar</li>
+      <li>✅ Sons binaurais e trilhas para foco total</li>
+      <li>✅ Missões semanais e desafios</li>
     </ul>
-
-    <p>Este é o lugar onde as <strong>mentes determinadas se conectam</strong>. Você nunca mais estará sozinho na sua jornada.</p>
 
     <a href="https://wa.me/5555996043937?text=Quero%20entrar%20no%20Grupo%20VIP%20Hyper-F" class="rainbow-button" target="_blank">
       Entrar no Grupo VIP Hyper-F
     </a>
 
     <div class="guarantee">
-      Garantia de satisfação: Se em 7 dias você não sentir a transformação, devolvemos seu investimento. Sem burocracia.
+      Garantia 7 dias: ou seu dinheiro de volta. Sem burocracia.
     </div>
   </div>
 
-  <!-- Botão flutuante do WhatsApp -->
-  <a href="https://wa.me/5555996043937?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Método%20Hyper-F." target="_blank" class="whatsapp-button" aria-label="Contato WhatsApp">
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5555996043937" target="_blank" class="whatsapp-button" aria-label="WhatsApp Suporte">
     <svg viewBox="0 0 24 24">
       <path d="M20.52 3.48a11.78 11.78 0 0 0-16.66 0 11.95 11.95 0 0 0-3.16 8.48c0 2.22.59 4.4 1.71 6.3L2 22l4.03-1.32a11.93 11.93 0 0 0 6.43 1.87h.01c6.5 0 11.78-5.28 11.78-11.79a11.67 11.67 0 0 0-3.73-8.27Z"/>
     </svg>
   </a>
+
+  <!-- Script para ativar som na rolagem -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const audio = document.getElementById("audio");
+      let audioPlayed = false;
+
+      function activateAudio() {
+        if (!audioPlayed) {
+          audio.play().catch(() => {});
+          audioPlayed = true;
+        }
+      }
+
+      window.addEventListener("scroll", activateAudio);
+    });
+  </script>
 </body>
-  </html>
+      </html>
