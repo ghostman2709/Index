@@ -110,12 +110,6 @@
       width: 30px;
       height: 30px;
     }
-    #playButton {
-      position: absolute;
-      left: -9999px;
-      opacity: 0;
-      pointer-events: none;
-    }
     audio {
       display: none;
     }
@@ -130,9 +124,6 @@
       <source src="audio.mp3" type="audio/mpeg" />
       Seu navegador não suporta o elemento de áudio.
     </audio>
-
-    <!-- Botão invisível para ativar o áudio -->
-    <button id="playButton">Play Audio</button>
 
     <h2>Por que o Método Hyper-F é para você?</h2>
     <p>Você sente que falta foco e disciplina no dia a dia?</p>
@@ -190,25 +181,29 @@
     </svg>
   </a>
 
-  <!-- Script para ativar som com rolagem -->
+  <!-- Script para tentar tocar áudio com interações -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const audio = document.getElementById("audio");
-      const button = document.getElementById("playButton");
       let played = false;
 
-      function activateAudio() {
+      function tryPlayAudio() {
         if (!played) {
-          button.click();
-          played = true;
+          audio.play().then(() => {
+            played = true;
+            // Remove listeners após o sucesso
+            window.removeEventListener("scroll", tryPlayAudio);
+            window.removeEventListener("touchstart", tryPlayAudio);
+            window.removeEventListener("mousemove", tryPlayAudio);
+          }).catch(() => {
+            // Falha pode acontecer se usuário não interagir realmente
+          });
         }
       }
 
-      button.addEventListener("click", function () {
-        audio.play().catch(() => {});
-      });
-
-      window.addEventListener("scroll", activateAudio);
+      window.addEventListener("scroll", tryPlayAudio);
+      window.addEventListener("touchstart", tryPlayAudio);
+      window.addEventListener("mousemove", tryPlayAudio);
     });
   </script>
 </body>
