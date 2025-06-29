@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hiperfoco – O Poder de 10 Minutos por Dia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #111;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeSlide 1.5s ease-out forwards;
+    }
+    header h1 { font-size: 2.5rem; color: #00ffcc; margin: 0; }
+    header p { font-size: 1.2rem; color: #ccc; margin-top: 0.5rem; }
+    .section {
+      padding: 3rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlide 1.2s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+    .section h2 { color: #00ffcc; font-size: 1.8rem; margin-bottom: 1rem; }
+    .buy-btn {
+      background: #00ffcc;
+      color: #111;
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      margin-top: 2rem;
+      font-weight: 900;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffccaa;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    .buy-btn:hover {
+      background: #00ccaa;
+      box-shadow: 0 0 25px #00ccaaee;
+    }
+    .quote {
+      font-style: italic;
+      color: #aaa;
+      margin: 2rem 0;
+    }
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    li::before { content: "✓ "; color: #00ffcc; }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      opacity: 0;
+      animation: fadeSlide 1s ease-out forwards;
+      animation-delay: 1.5s;
+    }
+    #audioControl {
+      margin-top: 2rem;
+      background: transparent;
+      border: 2px solid #00ffcc;
+      color: #00ffcc;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #audioControl:hover {
+      background: #00ffcc;
+      color: #111;
+    }
+    .vip-benefits {
+      background: #000a;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 3rem;
+      color: #ccffdd;
+      animation: fadeSlide 1.5s ease-out forwards;
+      animation-delay: 1.3s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .vip-benefits h3 { color: #00ffcc; margin-bottom: 1rem; }
+    .vip-benefits li::before { content: "✔️ "; color: #00ffcc; }
+
+    #demoContent {
+      display: none;
+      margin-top: 2rem;
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hiperfoco</h1>
+  <p>O Poder de 10 Minutos por Dia</p>
+</header>
+
+<div class="section">
+  <h2>🔥 Transforme sua mente com apenas 10 minutos por dia</h2>
+  <p>Este não é apenas um livro. É um método para transformar sua forma de viver, pensar e agir.</p>
+  <p class="quote">“Mude seus pensamentos e mudará sua vida.” — Napoleon Hill</p>
+
+  <h2>🎧 Ative a trilha sonora da sua mente</h2>
+  <p>Entre no estado mental ideal com nossa trilha sonora especial.</p>
+  <button id="audioControl">Ativar Trilha Sonora 🎧</button>
+  <audio id="bgAudio" src="audio.mp3" loop></audio>
+
+  <h2>📘 O que você recebe:</h2>
+  <ul>
+    <li>20 capítulos transformadores</li>
+    <li>Exercícios mentais diários</li>
+    <li>Trilha sonora com frequências mentais</li>
+    <li>Frases de impacto que despertam ação</li>
+    <li>Grupo VIP com milhares de livros e audiobooks gratuitos</li>
+  </ul>
+
+  <div class="vip-benefits">
+    <h3>Benefícios Exclusivos do Grupo VIP</h3>
+    <ul>
+      <li>Acesso a milhares de livros em PDF e audiobooks</li>
+      <li>Lives semanais com foco e motivação</li>
+      <li>Comunidade ativa para trocar ideias</li>
+      <li>Exercícios e materiais exclusivos</li>
+      <li>Descontos em futuros lançamentos</li>
+    </ul>
+  </div>
+
+  <a href="https://pay.kiwify.com.br/cstPi7Q" target="_blank" class="buy-btn" rel="noopener noreferrer">
+    Quero transformar minha vida AGORA
+  </a>
+</div>
+
+<div class="section">
+  <h2>📖 Leia o Capítulo 1 – Demonstração</h2>
+  <button id="toggleDemo" class="buy-btn" style="background:#222; color:#00ffcc; box-shadow:none;">Ver Demonstração</button>
+  <div id="demoContent">
+    <h3>🔥 Capítulo 1 – A Decisão de Queimar as Pontes</h3>
+    <p><em>“Quando você queima as pontes, não sobra caminho de volta — só a direção do seu propósito.”</em> — Napoleon Hill</p>
+    <p><em>“Compromisso total é o ponto em que o destino começa a obedecer.”</em> — Tony Robbins</p>
+    <p><em>“Quem tem um porquê, enfrenta qualquer como.”</em> — Nietzsche</p>
+    <br/>
+    <p>Você já se sentiu dividido entre seguir um sonho ou manter a segurança do que é conhecido? Queimar as pontes significa eliminar qualquer rota de fuga e se comprometer completamente com seu objetivo.</p>
+    <p><strong>Exemplo prático:</strong> Imagine um navegador que queima os navios ao chegar em terra firme — não há mais retorno. É vencer ou vencer. Quando você toma essa decisão, sua mente entra em outro nível de ação.</p>
+    <p><strong>Reflexão:</strong> Quais são as pontes que você precisa queimar hoje para finalmente viver sua verdadeira missão?</p>
+  </div>
+</div>
+
+<footer>
+  © 2025 Projeto Hiperfoco. Todos os direitos reservados.
+</footer>
+
+<script>
+  const btn = document.getElementById('audioControl');
+  const audio = document.getElementById('bgAudio');
+  let isPlaying = false;
+  btn.addEventListener('click', () => {
+    if (!isPlaying) {
+      audio.play();
+      btn.textContent = 'Parar Trilha Sonora ⏸️';
+      isPlaying = true;
+    } else {
+      audio.pause();
+      btn.textContent = 'Ativar Trilha Sonora 🎧';
+      isPlaying = false;
+    }
+  });
+
+  const demoBtn = document.getElementById('toggleDemo');
+  const demo = document.getElementById('demoContent');
+  demoBtn.addEventListener('click', () => {
+    if (demo.style.display === 'none') {
+      demo.style.display = 'block';
+      demoBtn.textContent = 'Fechar Demonstração';
+    } else {
+      demo.style.display = 'none';
+      demoBtn.textContent = 'Ver Demonstração';
+    }
+  });
+</script>
+
+</body>
+</html>
