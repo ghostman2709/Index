@@ -3,192 +3,237 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Método Hiperfoco Transforme Seu Foco e Sua Vida</title>
+  <title>Hiperfoco – O Poder de 10 Minutos por Dia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212;
-      color: #eee;
       margin: 0;
-      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #111;
+      color: #f5f5f5;
       line-height: 1.6;
+      overflow-x: hidden;
     }
-    .container {
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1, h2 {
-      color: #00aaff;
+
+    header {
+      background: #000;
+      padding: 2rem;
       text-align: center;
+      animation: fadeSlide 1.5s ease-out forwards;
     }
-    h1 {
-      margin-bottom: 10px;
+
+    header h1 {
       font-size: 2.5rem;
+      color: #00ffcc;
+      margin: 0;
     }
-    h2 {
-      margin-top: 40px;
-      margin-bottom: 20px;
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    .section {
+      padding: 3rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlide 1.2s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+
+    .section h2 {
+      color: #00ffcc;
       font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
-    p {
-      margin-bottom: 15px;
+
+    .cta,
+    .buy-btn {
+      background: #00ffcc;
+      color: #111;
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      margin-top: 2rem;
+      font-weight: 900;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffccaa;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeSlide 1.5s ease-out forwards;
+      opacity: 0;
+      transform: translateY(30px);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .cta:hover,
+    .buy-btn:hover {
+      background: #00ccaa;
+      box-shadow: 0 0 25px #00ccaaee;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #aaa;
+      margin: 2rem 0;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    li::before {
+      content: "✓ ";
+      color: #00ffcc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      opacity: 0;
+      animation: fadeSlide 1s ease-out forwards;
+      animation-delay: 1.5s;
+    }
+
+    #audioControl {
+      margin-top: 2rem;
+      background: transparent;
+      border: 2px solid #00ffcc;
+      color: #00ffcc;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #audioControl:hover {
+      background: #00ffcc;
+      color: #111;
+    }
+
+    /* Nova seção de benefícios */
+    .vip-benefits {
+      background: #000a;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 3rem;
+      color: #ccffdd;
+      animation: fadeSlide 1.5s ease-out forwards;
+      animation-delay: 1.3s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .vip-benefits h3 {
+      color: #00ffcc;
+      margin-bottom: 1rem;
+    }
+
+    .vip-benefits ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .vip-benefits li {
+      margin-bottom: 0.8rem;
       font-size: 1.1rem;
     }
-    .rainbow-button, .sound-button {
-      display: block;
-      width: 100%;
-      padding: 15px 0;
-      margin: 30px 0;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      color: #000;
-      background: linear-gradient(270deg, #40e0d0, #ff8c00, #ff0080, #8a2be2, #40e0d0);
-      background-size: 1000% 1000%;
-      border-radius: 8px;
-      animation: rainbow 6s ease infinite;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+
+    .vip-benefits li::before {
+      content: "✔️ ";
+      color: #00ffcc;
     }
-    .rainbow-button:hover, .sound-button:hover {
-      transform: scale(1.03);
-    }
-    @keyframes rainbow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    audio {
-      display: none;
-    }
-    .bonus-list, .features-list {
-      list-style: none;
-      padding-left: 0;
-    }
-    .bonus-list li, .features-list li {
-      background: #222;
-      margin-bottom: 10px;
-      padding: 12px 15px;
-      border-radius: 6px;
-    }
-    .guarantee {
-      background: #004466;
-      color: #ccf5ff;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      margin-top: 40px;
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .whatsapp-button:hover {
-      background-color: #1ebe57;
-    }
-    .whatsapp-button svg {
-      fill: white;
-      width: 30px;
-      height: 30px;
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Método Hiperfoco</h1>
 
-    <!-- Botão de ativar som -->
-    <button id="playAudio" class="sound-button">🎧 Toque aqui para ativar a trilha sonora e entrar no modo foco</button>
+  <header>
+    <h1>Hiperfoco</h1>
+    <p>O Poder de 10 Minutos por Dia</p>
+  </header>
 
-    <!-- Áudio oculto -->
-    <audio id="audio" loop>
-      <source src="audio.mp3" type="audio/mpeg" />
-      Seu navegador não suporta o elemento de áudio.
-    </audio>
+  <div class="section">
+    <h2>🔥 Transforme sua mente com apenas 10 minutos por dia</h2>
+    <p>Este não é apenas um livro. É um método para transformar sua forma de viver, pensar e agir. Descubra o poder de 20 capítulos intensos com exercícios mentais, frases impactantes e áudios poderosos.</p>
+    <p class="quote">“Mude seus pensamentos e mudará sua vida.” — Napoleon Hill</p>
 
-    <h2>Por que o Método Hiperfoco é para você?</h2>
-    <p>Você sente que falta foco e disciplina no dia a dia?</p>
-    <p>Quer agir com clareza, superar o medo e atrair o sucesso?</p>
-    <p>O <strong>Método Hiperfoco</strong> vai te ensinar a transformar pequenos minutos em grandes conquistas.</p>
+    <h2>🎧 Ative a trilha sonora da sua mente</h2>
+    <p>Entre no estado mental ideal com nossa trilha sonora especial. Clique no botão abaixo:</p>
+    <button id="audioControl">Ativar Trilha Sonora 🎧</button>
+    <audio id="bgAudio" src="audio.mp3" loop></audio>
 
-    <h2>O que você vai aprender?</h2>
-    <ul class="features-list">
-      <li>Como despertar a fé inabalável e manter a motivação acesa</li>
-      <li>A fórmula da Lei da Atração aplicada ao seu cotidiano</li>
-      <li>Estratégias para agir com ação massiva rumo aos seus objetivos</li>
-      <li>Técnicas para controlar seu tempo e seu ambiente mental</li>
+    <h2>📘 O que você recebe:</h2>
+    <ul>
+      <li>20 capítulos transformadores</li>
+      <li>Exercícios mentais diários</li>
+      <li>Trilha sonora com frequências mentais</li>
+      <li>Frases de impacto que despertam ação</li>
+      <li>Grupo VIP com milhares de livros e audiobooks gratuitos</li>
     </ul>
 
-    <h2>Benefícios que você terá</h2>
-    <ul class="bonus-list">
-      <li>Mais clareza e foco para decisões importantes</li>
-      <li>Energia e disciplina para agir todos os dias</li>
-      <li>Redução do estresse com controle da mente</li>
-      <li>Crescimento constante com exercícios práticos</li>
-    </ul>
-
-    <a href="https://pay.kiwify.com.br/9lRqCTY" class="rainbow-button" target="_blank">
-      Clique aqui para finalizar a compra do Método Hyper-F
-    </a>
-
-    <h2>Grupo VIP Hiperfoco Alta Performance e Foco Extremo</h2>
-    <p>Ao adquirir o Método Hiperfoco, você terá acesso ao nosso <strong>Grupo VIP exclusivo</strong>, onde a transformação acontece todos os dias.</p>
-
-    <ul class="bonus-list">
-      <li>✅ Metas e resultados diários compartilhados com a comunidade</li>
-      <li>✅ Dicas de treinos, alimentação e bem-estar</li>
-      <li>✅ Sons binaurais e trilhas para foco total</li>
-      <li>✅ Missões semanais e desafios</li>
-      <li>✅ Motivação diária em grupo</li>
-      <li>✅ Compartilhamento de experiências com pessoas que têm o mesmo propósito, além de acesso gratuito a livros em PDF e audiobooks.</li>
-    </ul>
-
-    <a href="https://wa.me/5555996043937?text=Quero%20entrar%20no%20Grupo%20VIP%20Hyper-F" class="rainbow-button" target="_blank">
-      Entrar no Grupo VIP Hiperfoco
-    </a>
-
-    <div class="guarantee">
-      Não é sobre preço. É sobre valor. O que você investe em você, ninguém pode tirar.
-
+    <!-- Benefícios do Grupo VIP -->
+    <div class="vip-benefits">
+      <h3>Benefícios Exclusivos do Grupo VIP</h3>
+      <ul>
+        <li>Acesso a milhares de livros em PDF e audiobooks selecionados</li>
+        <li>Participação em lives semanais para tirar dúvidas e motivar</li>
+        <li>Comunidade ativa para troca de experiências e suporte</li>
+        <li>Material extra e exercícios exclusivos para membros</li>
+        <li>Descontos e ofertas especiais em futuros lançamentos</li>
+        <li>Acesso antecipado a novos conteúdos e atualizações</li>
+      </ul>
     </div>
+
+    <!-- Botão de compra atualizado -->
+    <a href="https://pay.kiwify.com.br/cstPi7Q" target="_blank" class="buy-btn" rel="noopener noreferrer">
+      Quero transformar minha vida AGORA
+    </a>
   </div>
 
-  <!-- Botão flutuante WhatsApp -->
-  <a href="https://wa.me/5555996043937" target="_blank" class="whatsapp-button" aria-label="WhatsApp Suporte">
-    <svg viewBox="0 0 24 24">
-      <path d="M20.52 3.48a11.78 11.78 0 0 0-16.66 0 11.95 11.95 0 0 0-3.16 8.48c0 2.22.59 4.4 1.71 6.3L2 22l4.03-1.32a11.93 11.93 0 0 0 6.43 1.87h.01c6.5 0 11.78-5.28 11.78-11.79a11.67 11.67 0 0 0-3.73-8.27Z"/>
-    </svg>
-  </a>
+  <footer>
+    © 2025 Projeto Hiperfoco. Todos os direitos reservados.
+  </footer>
 
-  <!-- Script para ativar áudio -->
   <script>
-    const audio = document.getElementById("audio");
-    const button = document.getElementById("playAudio");
+    const btn = document.getElementById('audioControl');
+    const audio = document.getElementById('bgAudio');
+    let isPlaying = false;
 
-    button.addEventListener("click", () => {
-      audio.play().then(() => {
-        button.style.display = "none";
-      }).catch((err) => {
-        alert("Não foi possível iniciar o áudio. Tente novamente.");
-        console.error(err);
-      });
+    btn.addEventListener('click', () => {
+      if (!isPlaying) {
+        audio.play();
+        btn.textContent = 'Parar Trilha Sonora ⏸️';
+        isPlaying = true;
+      } else {
+        audio.pause();
+        btn.textContent = 'Ativar Trilha Sonora 🎧';
+        isPlaying = false;
+      }
     });
   </script>
+
 </body>
 </html>
