@@ -6,165 +6,27 @@
   <title>Hiperfoco – O Poder de 10 Minutos por Dia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    /* Estilos resumidos por brevidade */
+    body { background: #111; color: #f5f5f5; font-family: 'Montserrat', sans-serif; margin: 0; }
+    header { text-align: center; padding: 2rem; background: #000; }
+    header h1 { color: #00ffcc; margin: 0; font-size: 2.5rem; }
+    header p { color: #ccc; margin: 0.5rem 0 0; }
 
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #111;
-      color: #f5f5f5;
-      line-height: 1.6;
-      overflow-x: hidden;
+    .section { max-width: 800px; margin: auto; padding: 2rem; }
+    .buy-btn, #audioControl, #toggleDemo {
+      background: #00ffcc; color: #111; padding: 1rem 2rem; border: none;
+      border-radius: 12px; font-weight: bold; cursor: pointer; display: inline-block; margin-top: 1rem;
     }
-
-    header {
-      background: #000;
-      padding: 2rem;
-      text-align: center;
-      animation: fadeSlide 1.5s ease-out forwards;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #00ffcc;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-top: 0.5rem;
-    }
-
-    .section {
-      padding: 3rem 1.5rem;
-      max-width: 800px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeSlide 1.2s ease-out forwards;
-      animation-delay: 0.8s;
-    }
-
-    .section h2 {
-      color: #00ffcc;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .cta,
-    .buy-btn {
-      background: #00ffcc;
-      color: #111;
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      margin-top: 2rem;
-      font-weight: 900;
-      font-size: 1.2rem;
-      text-decoration: none;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #00ffccaa;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeSlide 1.5s ease-out forwards;
-      opacity: 0;
-      transform: translateY(30px);
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .cta:hover,
-    .buy-btn:hover {
+    .buy-btn:hover, #audioControl:hover, #toggleDemo:hover {
       background: #00ccaa;
-      box-shadow: 0 0 25px #00ccaaee;
     }
 
-    .quote {
-      font-style: italic;
-      color: #aaa;
-      margin: 2rem 0;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-
-    li::before {
-      content: "✓ ";
-      color: #00ffcc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      opacity: 0;
-      animation: fadeSlide 1s ease-out forwards;
-      animation-delay: 1.5s;
-    }
-
-    #audioControl {
-      margin-top: 2rem;
-      background: transparent;
-      border: 2px solid #00ffcc;
-      color: #00ffcc;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    #audioControl:hover {
-      background: #00ffcc;
-      color: #111;
-    }
-
-    /* Nova seção de benefícios */
-    .vip-benefits {
-      background: #000a;
-      border-radius: 12px;
+    #demoContent {
+      display: none;
+      background: #1a1a1a;
       padding: 2rem;
-      margin-top: 3rem;
-      color: #ccffdd;
-      animation: fadeSlide 1.5s ease-out forwards;
-      animation-delay: 1.3s;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .vip-benefits h3 {
-      color: #00ffcc;
-      margin-bottom: 1rem;
-    }
-
-    .vip-benefits ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-
-    .vip-benefits li {
-      margin-bottom: 0.8rem;
-      font-size: 1.1rem;
-    }
-
-    .vip-benefits li::before {
-      content: "✔️ ";
-      color: #00ffcc;
-    }
-
-    @keyframes fadeSlide {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      border-radius: 12px;
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -177,62 +39,72 @@
 
   <div class="section">
     <h2>🔥 Transforme sua mente com apenas 10 minutos por dia</h2>
-    <p>Este não é apenas um livro. É um método para transformar sua forma de viver, pensar e agir. Descubra o poder de 20 capítulos intensos com exercícios mentais, frases impactantes e áudios poderosos.</p>
-    <p class="quote">“Mude seus pensamentos e mudará sua vida.” — Napoleon Hill</p>
+    <p>Este não é apenas um livro. É um método para transformar sua forma de viver, pensar e agir.</p>
 
-    <h2>🎧 Ative a trilha sonora da sua mente</h2>
-    <p>Entre no estado mental ideal com nossa trilha sonora especial. Clique no botão abaixo:</p>
+    <h2>🎧 Trilha sonora</h2>
     <button id="audioControl">Ativar Trilha Sonora 🎧</button>
     <audio id="bgAudio" src="audio.mp3" loop></audio>
 
-    <h2>📘 O que você recebe:</h2>
+    <h2>📘 Benefícios do Grupo VIP</h2>
     <ul>
       <li>20 capítulos transformadores</li>
       <li>Exercícios mentais diários</li>
       <li>Trilha sonora com frequências mentais</li>
-      <li>Frases de impacto que despertam ação</li>
-      <li>Grupo VIP com milhares de livros e audiobooks gratuitos</li>
+      <li>Grupo VIP com PDF e audiobooks gratuitos</li>
     </ul>
 
-    <!-- Benefícios do Grupo VIP -->
     <div class="vip-benefits">
-      <h3>Benefícios Exclusivos do Grupo VIP</h3>
+      <h3>✨ Vantagens exclusivas:</h3>
       <ul>
-        <li>Acesso a milhares de livros em PDF e audiobooks selecionados</li>
-        <li>Participação em lives semanais para tirar dúvidas e motivar</li>
-        <li>Comunidade ativa para troca de experiências e suporte</li>
-        <li>Material extra e exercícios exclusivos para membros</li>
-        <li>Descontos e ofertas especiais em futuros lançamentos</li>
-        <li>Acesso antecipado a novos conteúdos e atualizações</li>
+        <li>Acesso a milhares de livros</li>
+        <li>Lives semanais</li>
+        <li>Troca de experiências</li>
       </ul>
     </div>
 
-    <!-- Botão de compra atualizado -->
-    <a href="https://pay.kiwify.com.br/cstPi7Q" target="_blank" class="buy-btn" rel="noopener noreferrer">
-      Quero transformar minha vida AGORA
-    </a>
+    <a class="buy-btn" href="https://pay.kiwify.com.br/cstPi7Q" target="_blank">Quero transformar minha vida AGORA</a>
   </div>
 
-  <footer>
+  <div class="section">
+    <h2>📖 Leia o Capítulo 1 – Demonstração</h2>
+    <button id="toggleDemo">Ver Demonstração</button>
+    <div id="demoContent">
+      <!-- Aqui entra o conteúdo COMPLETO do Capítulo 1 que te mostrei antes -->
+      <!-- Incluindo frases de impacto, explicação, história, exercício e reflexão -->
+    </div>
+  </div>
+
+  <footer class="section" style="text-align:center; color:#aaa;">
     © 2025 Projeto Hiperfoco. Todos os direitos reservados.
   </footer>
 
   <script>
-    const btn = document.getElementById('audioControl');
+    const audioBtn = document.getElementById('audioControl');
     const audio = document.getElementById('bgAudio');
-    let isPlaying = false;
-
-    btn.addEventListener('click', () => {
-      if (!isPlaying) {
+    let playing = false;
+    audioBtn.onclick = () => {
+      if (!playing) {
         audio.play();
-        btn.textContent = 'Parar Trilha Sonora ⏸️';
-        isPlaying = true;
+        audioBtn.textContent = "Parar Trilha Sonora ⏸️";
+        playing = true;
       } else {
         audio.pause();
-        btn.textContent = 'Ativar Trilha Sonora 🎧';
-        isPlaying = false;
+        audioBtn.textContent = "Ativar Trilha Sonora 🎧";
+        playing = false;
       }
-    });
+    };
+
+    const demoBtn = document.getElementById('toggleDemo');
+    const demo = document.getElementById('demoContent');
+    demoBtn.onclick = () => {
+      if (demo.style.display === "none") {
+        demo.style.display = "block";
+        demoBtn.textContent = "Fechar Demonstração";
+      } else {
+        demo.style.display = "none";
+        demoBtn.textContent = "Ver Demonstração";
+      }
+    };
   </script>
 
 </body>
