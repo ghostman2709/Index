@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hiperfoco – O Poder de 10 Minutos por Dia</title>
+  <title>Hiperfoco O Poder de 10 Minutos por Dia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
@@ -11,24 +11,28 @@
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #001122, #002244);
-      color: #f4faff;
+      color: #66ccff;
       line-height: 1.6;
     }
     header {
-      background: #001122;
+      background: #002244; /* faixa azul unificada para o título */
       padding: 2rem;
       text-align: center;
+      box-shadow: 0 0 15px #3399ff;
     }
     header h1 {
       font-size: 2.5rem;
       color: #66ccff;
       margin: 0;
       text-shadow: 0 0 10px #3399ff;
+      font-weight: 700;
     }
     header p {
       font-size: 1.2rem;
-      color: #aaccee;
+      color: #99ccff;
       margin-top: 0.5rem;
+      text-shadow: 0 0 5px #3399ff;
+      font-weight: 600;
     }
 
     .section {
@@ -42,11 +46,12 @@
       font-size: 1.8rem;
       margin-bottom: 1rem;
       text-shadow: 0 0 5px #3399ff;
+      font-weight: 700;
     }
 
     .quote {
       font-style: italic;
-      color: #cccccc;
+      color: #aaccee;
       margin: 2rem 0;
     }
 
@@ -65,36 +70,42 @@
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #88aabb;
+      text-shadow: 0 0 5px #3399ff88;
     }
 
     #audioControl {
       margin-top: 2rem;
-      background: transparent;
+      background: rgba(102, 204, 255, 0.1);
       border: 2px solid #66ccff;
       color: #66ccff;
       padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 12px;
+      font-weight: 700;
       cursor: pointer;
-      transition: background 0.3s ease;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
     }
 
     #audioControl:hover {
       background: #66ccff;
       color: #001122;
+      transform: scale(1.05);
     }
 
     .vip-benefits {
-      background: #002244;
+      background: rgba(0, 18, 34, 0.8);
       border-radius: 12px;
       padding: 2rem;
       margin-top: 3rem;
       color: #bbddff;
+      box-shadow: 0 0 10px #3399ff;
     }
 
     .vip-benefits h3 {
       color: #66ccff;
       margin-bottom: 1rem;
+      font-weight: 700;
     }
 
     .vip-benefits li::before {
@@ -107,7 +118,7 @@
       background: rgba(102, 204, 255, 0.1);
       color: #66ccff;
       padding: 1rem 2rem;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 1.2rem;
       text-decoration: none;
       border: 2px solid #66ccff;
@@ -121,6 +132,7 @@
       background: #66ccff;
       color: #001122;
       box-shadow: 0 0 20px #66ccffcc;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -154,6 +166,7 @@
     <h3>Benefícios Exclusivos do Grupo VIP</h3>
     <ul>
       <li>Acesso a milhares de livros em PDF e audiobooks</li>
+      <li>Mais de 200 audiobooks e PDFs de livros famosos grátis</li>
       <li>Lives semanais com foco e motivação</li>
       <li>Comunidade ativa para trocar ideias</li>
       <li>Exercícios e materiais exclusivos</li>
