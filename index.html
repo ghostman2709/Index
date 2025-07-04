@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hiperfoco O Poder de 10 Minutos por Dia</title>
+  <meta name="color-scheme" content="dark light" />
+  <title>Hiperfoco – O Poder de 10 Minutos por Dia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
@@ -13,32 +14,38 @@
       background: linear-gradient(135deg, #001122, #002244);
       color: #66ccff;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
+
     header {
-      background: #002244; /* faixa azul unificada para o título */
-      padding: 2rem;
+      padding: 2rem 1rem 1rem;
       text-align: center;
-      box-shadow: 0 0 15px #3399ff;
     }
+
     header h1 {
       font-size: 2.5rem;
       color: #66ccff;
       margin: 0;
-      text-shadow: 0 0 10px #3399ff;
+      text-shadow: 0 0 12px #3399ffcc;
       font-weight: 700;
     }
+
     header p {
       font-size: 1.2rem;
       color: #99ccff;
-      margin-top: 0.5rem;
-      text-shadow: 0 0 5px #3399ff;
+      margin-top: 0.2rem;
+      text-shadow: 0 0 8px #3399ff99;
       font-weight: 600;
     }
 
     .section {
-      padding: 3rem 1.5rem;
+      padding: 2rem 1.5rem 3rem;
       max-width: 800px;
-      margin: auto;
+      margin: 1rem auto;
+      border: 2px solid #66ccff;
+      border-radius: 16px;
+      background: rgba(0, 17, 34, 0.6);
+      box-shadow: 0 0 30px #66ccff, 0 0 60px #3399ffaa;
     }
 
     .section h2 {
@@ -123,7 +130,7 @@
       text-decoration: none;
       border: 2px solid #66ccff;
       border-radius: 12px;
-      box-shadow: 0 0 10px #3399ff99;
+      box-shadow: 0 0 20px #66ccffcc;
       transition: all 0.3s ease;
       margin-top: 3rem;
     }
@@ -131,30 +138,53 @@
     .access-link:hover {
       background: #66ccff;
       color: #001122;
-      box-shadow: 0 0 20px #66ccffcc;
       transform: scale(1.05);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    }
+
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .section h2 {
+        font-size: 1.4rem;
+      }
+      .access-link {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
+<header class="fade-in">
   <h1>Hiperfoco</h1>
   <p>O Poder de 10 Minutos por Dia</p>
 </header>
 
-<div class="section">
-  <h2>📘 Transforme sua mente com apenas 10 minutos por dia</h2>
-  <p>Este não é apenas um livro. É um método para transformar sua forma de viver, pensar e agir.</p>
-  <p class="quote">“Mude seus pensamentos e mudará sua vida.” — Napoleon Hill</p>
+<div class="section fade-in">
+  <h2 class="fade-in">📘 Transforme sua mente com apenas 10 minutos por dia</h2>
+  <p class="fade-in">Este não é apenas um livro. É um método para transformar sua forma de viver, pensar e agir.</p>
+  <p class="quote fade-in">“Mude seus pensamentos e mudará sua vida.” — Napoleon Hill</p>
 
-  <h2>🎧 Ative a trilha sonora da sua mente</h2>
-  <p>Entre no estado mental ideal com nossa trilha sonora especial.</p>
-  <button id="audioControl">Ativar Trilha Sonora 🎧</button>
+  <h2 class="fade-in">🎧 Ative a trilha sonora da sua mente</h2>
+  <p class="fade-in">Entre no estado mental ideal com nossa trilha sonora especial.</p>
+  <button id="audioControl" class="fade-in">Ativar Trilha Sonora 🎧</button>
   <audio id="bgAudio" src="audio.mp3" loop></audio>
 
-  <h2>📘 O que você recebe:</h2>
-  <ul>
+  <h2 class="fade-in">📘 O que você recebe:</h2>
+  <ul class="fade-in">
     <li>20 capítulos transformadores</li>
     <li>Exercícios mentais diários</li>
     <li>Trilha sonora com frequências mentais</li>
@@ -162,7 +192,7 @@
     <li>Grupo VIP com milhares de livros e audiobooks gratuitos</li>
   </ul>
 
-  <div class="vip-benefits">
+  <div class="vip-benefits fade-in">
     <h3>Benefícios Exclusivos do Grupo VIP</h3>
     <ul>
       <li>Acesso a livros em PDF e audiobooks</li>
@@ -174,16 +204,17 @@
     </ul>
   </div>
 
-  <a href="https://ghostman2709.github.io/hyperfoco-/" target="_blank" class="access-link" rel="noopener noreferrer">
+  <a href="https://ghostman2709.github.io/hyperfoco-/" target="_blank" class="access-link fade-in" rel="noopener noreferrer">
     👉 Acesse o conteúdo aqui!
   </a>
 </div>
 
-<footer>
+<footer class="fade-in">
   © 2025 Projeto Hiperfoco. Todos os direitos reservados.
 </footer>
 
 <script>
+  // Áudio
   const btn = document.getElementById('audioControl');
   const audio = document.getElementById('bgAudio');
   let isPlaying = false;
@@ -199,7 +230,20 @@
       isPlaying = false;
     }
   });
+
+  // Fade-in animation
+  const fadeIns = document.querySelectorAll('.fade-in');
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeIns.forEach(el => appearOnScroll.observe(el));
 </script>
 
 </body>
-</html>
+  </html>
