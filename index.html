@@ -3,18 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark light" />
   <title>Hiperfoco – O Poder de 10 Minutos por Dia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #001122, #002244);
       color: #66ccff;
-      line-height: 1.6;
       scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
 
     header {
@@ -26,7 +35,7 @@
       font-size: 2.5rem;
       color: #66ccff;
       margin: 0;
-      text-shadow: 0 0 12px #3399ffcc;
+      text-shadow: 0 0 20px #3399ffcc;
       font-weight: 700;
     }
 
@@ -34,7 +43,7 @@
       font-size: 1.2rem;
       color: #99ccff;
       margin-top: 0.2rem;
-      text-shadow: 0 0 8px #3399ff99;
+      text-shadow: 0 0 10px #3399ff99;
       font-weight: 600;
     }
 
@@ -52,7 +61,7 @@
       color: #66ccff;
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      text-shadow: 0 0 5px #3399ff;
+      text-shadow: 0 0 8px #3399ff;
       font-weight: 700;
     }
 
@@ -92,32 +101,13 @@
       font-size: 18px;
       transition: all 0.3s ease;
       backdrop-filter: blur(5px);
+      box-shadow: 0 0 10px #66ccff;
     }
 
     #audioControl:hover {
       background: #66ccff;
       color: #001122;
       transform: scale(1.05);
-    }
-
-    .vip-benefits {
-      background: rgba(0, 18, 34, 0.8);
-      border-radius: 12px;
-      padding: 2rem;
-      margin-top: 3rem;
-      color: #bbddff;
-      box-shadow: 0 0 10px #3399ff;
-    }
-
-    .vip-benefits h3 {
-      color: #66ccff;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    .vip-benefits li::before {
-      content: "✔️ ";
-      color: #66ccff;
     }
 
     .access-link {
@@ -141,17 +131,6 @@
       transform: scale(1.05);
     }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-    }
-
-    .fade-in.appear {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     @media (max-width: 480px) {
       header h1 {
         font-size: 2rem;
@@ -168,23 +147,25 @@
 </head>
 <body>
 
-<header class="fade-in">
+<canvas id="particles"></canvas>
+
+<header>
   <h1>Hiperfoco</h1>
   <p>O Poder de 10 Minutos por Dia</p>
 </header>
 
-<div class="section fade-in">
-  <h2 class="fade-in">📘 Transforme sua mente com apenas 10 minutos por dia</h2>
-  <p class="fade-in">Este não é apenas um livro. É um método para transformar sua forma de viver, pensar e agir.</p>
-  <p class="quote fade-in">“Mude seus pensamentos e mudará sua vida.” — Napoleon Hill</p>
+<div class="section">
+  <h2>📘 Transforme sua mente com apenas 10 minutos por dia</h2>
+  <p>Este não é apenas um livro. É um método para transformar sua forma de viver, pensar e agir.</p>
+  <p class="quote">“Mude seus pensamentos e mudará sua vida.” — Napoleon Hill</p>
 
-  <h2 class="fade-in">🎧 Ative a trilha sonora da sua mente</h2>
-  <p class="fade-in">Entre no estado mental ideal com nossa trilha sonora especial.</p>
-  <button id="audioControl" class="fade-in">Ativar Trilha Sonora 🎧</button>
+  <h2>🎧 Ative a trilha sonora da sua mente</h2>
+  <p>Entre no estado mental ideal com nossa trilha sonora especial.</p>
+  <button id="audioControl">Ativar Trilha Sonora 🎧</button>
   <audio id="bgAudio" src="audio.mp3" loop></audio>
 
-  <h2 class="fade-in">📘 O que você recebe:</h2>
-  <ul class="fade-in">
+  <h2>📘 O que você recebe:</h2>
+  <ul>
     <li>20 capítulos transformadores</li>
     <li>Exercícios mentais diários</li>
     <li>Trilha sonora com frequências mentais</li>
@@ -192,29 +173,16 @@
     <li>Grupo VIP com milhares de livros e audiobooks gratuitos</li>
   </ul>
 
-  <div class="vip-benefits fade-in">
-    <h3>Benefícios Exclusivos do Grupo VIP</h3>
-    <ul>
-      <li>Acesso a livros em PDF e audiobooks</li>
-      <li>Mais de 200 audiobooks e PDFs de livros famosos grátis</li>
-      <li>Lives semanais com foco e motivação</li>
-      <li>Comunidade ativa para trocar ideias</li>
-      <li>Exercícios e materiais exclusivos</li>
-      <li>Descontos em futuros lançamentos</li>
-    </ul>
-  </div>
-
-  <a href="https://ghostman2709.github.io/hyperfoco-/" target="_blank" class="access-link fade-in" rel="noopener noreferrer">
+  <a href="https://ghostman2709.github.io/hyperfoco-/" target="_blank" class="access-link" rel="noopener noreferrer">
     👉 Acesse o conteúdo aqui!
   </a>
 </div>
 
-<footer class="fade-in">
+<footer>
   © 2025 Projeto Hiperfoco. Todos os direitos reservados.
 </footer>
 
 <script>
-  // Áudio
   const btn = document.getElementById('audioControl');
   const audio = document.getElementById('bgAudio');
   let isPlaying = false;
@@ -231,19 +199,67 @@
     }
   });
 
-  // Fade-in animation
-  const fadeIns = document.querySelectorAll('.fade-in');
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('appear');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
+  // Partículas
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
-  fadeIns.forEach(el => appearOnScroll.observe(el));
+  const particlesArray = [];
+  const colors = ["#66ccff", "#3399ff", "#00ccff", "#88eeff"];
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 2 + 1;
+      this.speedX = Math.random() * 1 - 0.5;
+      this.speedY = Math.random() * 1 - 0.5;
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if (this.size > 0.2) this.size -= 0.02;
+    }
+
+    draw() {
+      ctx.fillStyle = this.color;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 8;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function initParticles() {
+    for (let i = 0; i < 120; i++) {
+      particlesArray.push(new Particle());
+    }
+  }
+
+  function handleParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < particlesArray.length; i++) {
+      particlesArray[i].update();
+      particlesArray[i].draw();
+      if (particlesArray[i].size <= 0.2) {
+        particlesArray[i] = new Particle();
+      }
+    }
+    requestAnimationFrame(handleParticles);
+  }
+
+  initParticles();
+  handleParticles();
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
 </script>
 
 </body>
-  </html>
+</html>
