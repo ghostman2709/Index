@@ -33,7 +33,7 @@
     header p {
       font-size: 1.2rem;
       color: #99ccff;
-      margin-top: 0.2rem;
+      margin-top: 0.5rem;
       text-shadow: 0 0 8px #3399ff99;
       font-weight: 600;
     }
@@ -81,7 +81,7 @@
     }
 
     #audioControl {
-      margin-top: 2rem;
+      margin-top: 1rem;
       background: rgba(102, 204, 255, 0.1);
       border: 2px solid #66ccff;
       color: #66ccff;
@@ -169,8 +169,10 @@
 <body>
 
 <header class="fade-in">
+  <button id="audioControl" class="fade-in" style="margin-bottom: 1.5rem;">Ativar Trilha Sonora 🎧</button>
+  <audio id="bgAudio" src="audio.mp3" loop></audio>
   <h1>Hiperfoco</h1>
-  <p>O Poder de 10 Minutos por Dia</p>
+  <p>Transforme sua mente com apenas 10 minutos por dia de leitura focada.</p>
 </header>
 
 <div class="section fade-in">
@@ -180,8 +182,6 @@
 
   <h2 class="fade-in">🎧 Ative a trilha sonora da sua mente</h2>
   <p class="fade-in">Entre no estado mental ideal com nossa trilha sonora especial.</p>
-  <button id="audioControl" class="fade-in">Ativar Trilha Sonora 🎧</button>
-  <audio id="bgAudio" src="audio.mp3" loop></audio>
 
   <h2 class="fade-in">📘 O que você recebe:</h2>
   <ul class="fade-in">
@@ -246,4 +246,4 @@
 </script>
 
 </body>
-  </html>
+</html>
