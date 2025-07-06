@@ -190,7 +190,7 @@
     <button id="audioControl" class="audio-button">Ativar Trilha Sonora 🎧</button>
     <button id="nextTrack" class="audio-button">⏭️ Próxima Faixa</button>
     <div id="trackName"></div>
-    <audio id="bgAudio" loop></audio>
+    <audio id="bgAudio" preload="auto" loop></audio>
   </div>
 </header>
 
@@ -247,20 +247,13 @@
   ];
 
   let isPlaying = false;
-  let currentTrack = -1;
-
-  function getRandomTrackIndex(excludeIndex) {
-    let index;
-    do {
-      index = Math.floor(Math.random() * tracks.length);
-    } while (index === excludeIndex);
-    return index;
-  }
+  let currentTrack = 0;
 
   function loadAndPlayTrack(index) {
+    if (index < 0 || index >= tracks.length) return;
     currentTrack = index;
-    audio.src = tracks[index].file;
-    trackName.textContent = `🎵 Tocando agora: ${tracks[index].name}`;
+    audio.src = tracks[currentTrack].file;
+    trackName.textContent = `🎵 Tocando agora: ${tracks[currentTrack].name}`;
     audio.play();
     isPlaying = true;
     playBtn.textContent = 'Parar Trilha Sonora ⏸️';
@@ -268,8 +261,7 @@
 
   playBtn.addEventListener('click', () => {
     if (!isPlaying) {
-      const randomIndex = getRandomTrackIndex(currentTrack);
-      loadAndPlayTrack(randomIndex);
+      loadAndPlayTrack(currentTrack);
     } else {
       audio.pause();
       isPlaying = false;
@@ -279,7 +271,25 @@
   });
 
   nextBtn.addEventListener('click', () => {
-    const nextIndex = getRandomTrackIndex(currentTrack);
+    let nextIndex = currentTrack + 1;
+    if (nextIndex >= tracks.length) nextIndex = 0;
+    loadAndPlayTrack(nextIndex);
+  });
+
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'audio-button';
+  prevBtn.textContent = '⏮️ Faixa Anterior';
+  prevBtn.addEventListener('click', () => {
+    let prevIndex = currentTrack - 1;
+    if (prevIndex < 0) prevIndex = tracks.length - 1;
+    loadAndPlayTrack(prevIndex);
+  });
+
+  nextBtn.parentNode.insertBefore(prevBtn, nextBtn);
+
+  audio.addEventListener('ended', () => {
+    let nextIndex = currentTrack + 1;
+    if (nextIndex >= tracks.length) nextIndex = 0;
     loadAndPlayTrack(nextIndex);
   });
 
@@ -297,4 +307,4 @@
 </script>
 
 </body>
-</html>
+  </html>
