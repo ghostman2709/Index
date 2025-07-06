@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
-  <title>Hiperfoco 20 Capítulos. 10 Minutos por Dia. A Mudança que Você Esperava.</title>
+  <meta name="description" content="Hiperfoco: 20 capítulos para transformar sua mente e sua vida em apenas 10 minutos por dia.">
+  <meta property="og:title" content="Hiperfoco – 20 Capítulos. 10 Minutos por Dia. A Mudança que Você Esperava.">
+  <meta name="theme-color" content="#001122" />
+  <title>Hiperfoco – 20 Capítulos. 10 Minutos por Dia.</title>
+  <link rel="icon" href="https://emojiapi.dev/api/v1/fire/64.png" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
@@ -36,6 +40,36 @@
       margin-top: 0.5rem;
       text-shadow: 0 0 8px #3399ff99;
       font-weight: 600;
+    }
+
+    .audio-controls {
+      margin-top: 1rem;
+    }
+
+    .audio-button {
+      background: rgba(102, 204, 255, 0.1);
+      border: 2px solid #66ccff;
+      color: #66ccff;
+      padding: 0.6rem 1.2rem;
+      margin: 0.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .audio-button:hover {
+      background: #66ccff;
+      color: #001122;
+      transform: scale(1.05);
+    }
+
+    #trackName {
+      margin-top: 0.5rem;
+      color: #aaccee;
+      font-size: 0.95rem;
     }
 
     .section {
@@ -80,21 +114,22 @@
       text-shadow: 0 0 5px #3399ff88;
     }
 
-    #audioControl {
-      margin-top: 1rem;
+    .access-link {
+      display: inline-block;
       background: rgba(102, 204, 255, 0.1);
-      border: 2px solid #66ccff;
       color: #66ccff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 12px;
+      padding: 1rem 2rem;
       font-weight: 700;
-      cursor: pointer;
-      font-size: 18px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border: 2px solid #66ccff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #66ccffcc;
       transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
+      margin-top: 3rem;
     }
 
-    #audioControl:hover {
+    .access-link:hover {
       background: #66ccff;
       color: #001122;
       transform: scale(1.05);
@@ -118,27 +153,6 @@
     .vip-benefits li::before {
       content: "✔️ ";
       color: #66ccff;
-    }
-
-    .access-link {
-      display: inline-block;
-      background: rgba(102, 204, 255, 0.1);
-      color: #66ccff;
-      padding: 1rem 2rem;
-      font-weight: 700;
-      font-size: 1.2rem;
-      text-decoration: none;
-      border: 2px solid #66ccff;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #66ccffcc;
-      transition: all 0.3s ease;
-      margin-top: 3rem;
-    }
-
-    .access-link:hover {
-      background: #66ccff;
-      color: #001122;
-      transform: scale(1.05);
     }
 
     .fade-in {
@@ -169,44 +183,47 @@
 <body>
 
 <header class="fade-in">
-  <button id="audioControl" class="fade-in" style="margin-bottom: 1.5rem;">Ativar Trilha Sonora 🎧</button>
-  <audio id="bgAudio" src="audio.mp3" loop></audio>
   <h1>Hiperfoco</h1>
-  <p></p>
+  <p>10 minutos por dia que podem transformar sua mente, seu foco e sua vida.</p>
+
+  <div class="audio-controls fade-in">
+    <button id="audioControl" class="audio-button">Ativar Trilha Sonora 🎧</button>
+    <button id="nextTrack" class="audio-button">⏭️ Próxima Faixa</button>
+    <div id="trackName"></div>
+    <audio id="bgAudio" loop></audio>
+  </div>
 </header>
 
 <div class="section fade-in">
-  <h2 class="fade-in">📘 20 Capítulos.</h2>
-  <p class="fade-in">Este não é apenas um Ebook. É um método para transformar sua forma de viver, pensar e agir.</p>
-  <p class="quote fade-in">"A vida que você vive é o reflexo dos pensamentos que você cultiva."
-— James Allen, autor de "As a Man Thinketh"
-</p>
+  <h2>📘 20 Capítulos.</h2>
+  <p>Este não é apenas um Ebook. É um método para transformar sua forma de viver, pensar e agir.</p>
+  <p class="quote">"A vida que você vive é o reflexo dos pensamentos que você cultiva."<br>— James Allen</p>
 
-  <h2 class="fade-in">🎧</h2>
-  <p class="fade-in"></p>
+  <h2>🎧 Trilha Sonora do Foco</h2>
+  <p>Ative o som enquanto lê. Frequências que aumentam seu estado de presença e clareza mental.</p>
 
-  <h2 class="fade-in">📘 O que você recebe:</h2>
-  <ul class="fade-in">
+  <h2>📘 O que você recebe:</h2>
+  <ul>
     <li>20 capítulos transformadores</li>
     <li>Exercícios mentais diários</li>
-    <li>Audios com frequências mentais</li>
+    <li>Áudios com frequências mentais</li>
     <li>Frases que despertam ação</li>
-    <li>Grupo VIP.</li>
+    <li>Acesso ao Grupo VIP</li>
   </ul>
 
-  <div class="vip-benefits fade-in">
+  <div class="vip-benefits">
     <h3>Benefícios Exclusivos do Grupo VIP</h3>
     <ul>
       <li>Acesso a livros em PDF</li>
-      <li>Audiobooks</li>
-      <li>Temas sobre foco</li>
-      <li>Comunidade ativa</li>
+      <li>Audiobooks completos</li>
+      <li>Temas avançados sobre foco</li>
+      <li>Comunidade ativa para crescimento</li>
       <li>Exercícios exclusivos</li>
-      <li>Ao comprar este Ebook, próximo capítulo pode ser assinado por você.</li>
+      <li>Assine o próximo capítulo com seu nome como coautor</li>
     </ul>
   </div>
 
-  <a href="https://ghostman2709.github.io/hyperfoco-/" target="_blank" class="access-link fade-in" rel="noopener noreferrer">
+  <a href="https://ghostman2709.github.io/hyperfoco-/" target="_blank" class="access-link" rel="noopener noreferrer">
     👉 Acesse o conteúdo aqui!
   </a>
 </div>
@@ -216,24 +233,56 @@
 </footer>
 
 <script>
-  // Áudio
-  const btn = document.getElementById('audioControl');
   const audio = document.getElementById('bgAudio');
-  let isPlaying = false;
+  const playBtn = document.getElementById('audioControl');
+  const nextBtn = document.getElementById('nextTrack');
+  const trackName = document.getElementById('trackName');
 
-  btn.addEventListener('click', () => {
+  const tracks = [
+    { name: 'Frequência Alfa', file: 'audio1.mp3' },
+    { name: 'Foco Profundo', file: 'audio2.mp3' },
+    { name: 'Clareza Mental', file: 'audio3.mp3' },
+    { name: 'Relaxamento Produtivo', file: 'audio4.mp3' },
+    { name: 'Ressonância Criativa', file: 'audio5.mp3' }
+  ];
+
+  let isPlaying = false;
+  let currentTrack = -1;
+
+  function getRandomTrackIndex(excludeIndex) {
+    let index;
+    do {
+      index = Math.floor(Math.random() * tracks.length);
+    } while (index === excludeIndex);
+    return index;
+  }
+
+  function loadAndPlayTrack(index) {
+    currentTrack = index;
+    audio.src = tracks[index].file;
+    trackName.textContent = `🎵 Tocando agora: ${tracks[index].name}`;
+    audio.play();
+    isPlaying = true;
+    playBtn.textContent = 'Parar Trilha Sonora ⏸️';
+  }
+
+  playBtn.addEventListener('click', () => {
     if (!isPlaying) {
-      audio.play();
-      btn.textContent = 'Parar Trilha Sonora ⏸️';
-      isPlaying = true;
+      const randomIndex = getRandomTrackIndex(currentTrack);
+      loadAndPlayTrack(randomIndex);
     } else {
       audio.pause();
-      btn.textContent = 'Ativar Trilha Sonora 🎧';
       isPlaying = false;
+      playBtn.textContent = 'Ativar Trilha Sonora 🎧';
+      trackName.textContent = '';
     }
   });
 
-  // Fade-in animation
+  nextBtn.addEventListener('click', () => {
+    const nextIndex = getRandomTrackIndex(currentTrack);
+    loadAndPlayTrack(nextIndex);
+  });
+
   const fadeIns = document.querySelectorAll('.fade-in');
   const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
