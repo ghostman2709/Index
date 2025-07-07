@@ -188,7 +188,6 @@
 
   <div class="audio-controls fade-in">
     <button id="audioControl" class="audio-button">Ativar Trilha Sonora 🎧</button>
-    <button id="nextTrack" class="audio-button">⏭️ Próxima Faixa</button>
     <div id="trackName"></div>
     <audio id="bgAudio" preload="auto" loop></audio>
   </div>
@@ -235,33 +234,22 @@
 <script>
   const audio = document.getElementById('bgAudio');
   const playBtn = document.getElementById('audioControl');
-  const nextBtn = document.getElementById('nextTrack');
   const trackName = document.getElementById('trackName');
 
-  const tracks = [
-    { name: 'Frequência Alfa', file: 'audio1.mp3' },
-    { name: 'Foco Profundo', file: 'audio2.mp3' },
-    { name: 'Clareza Mental', file: 'audio3.mp3' },
-    { name: 'Relaxamento Produtivo', file: 'audio4.mp3' },
-    { name: 'Ressonância Criativa', file: 'audio5.mp3' }
-  ];
-
+  const track = { name: 'Relaxamento Produtivo', file: 'audio4.mp3' };
   let isPlaying = false;
-  let currentTrack = 0;
 
-  function loadAndPlayTrack(index) {
-    if (index < 0 || index >= tracks.length) return;
-    currentTrack = index;
-    audio.src = tracks[currentTrack].file;
-    trackName.textContent = `🎵 Tocando agora: ${tracks[currentTrack].name}`;
-    audio.play();
-    isPlaying = true;
-    playBtn.textContent = 'Parar Trilha Sonora ⏸️';
+  function loadTrack() {
+    audio.src = track.file;
+    trackName.textContent = `🎵 Tocando: ${track.name}`;
   }
 
   playBtn.addEventListener('click', () => {
     if (!isPlaying) {
-      loadAndPlayTrack(currentTrack);
+      loadTrack();
+      audio.play();
+      isPlaying = true;
+      playBtn.textContent = 'Parar Trilha Sonora ⏸️';
     } else {
       audio.pause();
       isPlaying = false;
@@ -270,27 +258,10 @@
     }
   });
 
-  nextBtn.addEventListener('click', () => {
-    let nextIndex = currentTrack + 1;
-    if (nextIndex >= tracks.length) nextIndex = 0;
-    loadAndPlayTrack(nextIndex);
-  });
-
-  const prevBtn = document.createElement('button');
-  prevBtn.className = 'audio-button';
-  prevBtn.textContent = '⏮️ Faixa Anterior';
-  prevBtn.addEventListener('click', () => {
-    let prevIndex = currentTrack - 1;
-    if (prevIndex < 0) prevIndex = tracks.length - 1;
-    loadAndPlayTrack(prevIndex);
-  });
-
-  nextBtn.parentNode.insertBefore(prevBtn, nextBtn);
-
   audio.addEventListener('ended', () => {
-    let nextIndex = currentTrack + 1;
-    if (nextIndex >= tracks.length) nextIndex = 0;
-    loadAndPlayTrack(nextIndex);
+    isPlaying = false;
+    playBtn.textContent = 'Ativar Trilha Sonora 🎧';
+    trackName.textContent = '';
   });
 
   const fadeIns = document.querySelectorAll('.fade-in');
@@ -307,4 +278,4 @@
 </script>
 
 </body>
-  </html>
+</html>
