@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Language" content="pt-BR" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
-  <meta name="description" content="Hiperfoco: 20 capítulos para transformar sua mente e sua vida em apenas 10 minutos por dia.">
-  <meta property="og:title" content="Hiperfoco – 20 Capítulos. 10 Minutos por Dia. A Mudança que Você Esperava.">
-  <meta name="theme-color" content="#001122" />
-  <title>Hiperfoco – 20 Capítulos. 10 Minutos por Dia.</title>
-  <link rel="icon" href="https://emojiapi.dev/api/v1/fire/64.png" />
+  <title>Hiperfoco Acesso e Ofertas</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    /* Seu CSS permanece inalterado */
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -20,12 +18,10 @@
       line-height: 1.6;
       scroll-behavior: smooth;
     }
-
     header {
       padding: 2rem 1rem 1rem;
       text-align: center;
     }
-
     header h1 {
       font-size: 2.5rem;
       color: #66ccff;
@@ -33,7 +29,6 @@
       text-shadow: 0 0 12px #3399ffcc;
       font-weight: 700;
     }
-
     header p {
       font-size: 1.2rem;
       color: #99ccff;
@@ -41,37 +36,6 @@
       text-shadow: 0 0 8px #3399ff99;
       font-weight: 600;
     }
-
-    .audio-controls {
-      margin-top: 1rem;
-    }
-
-    .audio-button {
-      background: rgba(102, 204, 255, 0.1);
-      border: 2px solid #66ccff;
-      color: #66ccff;
-      padding: 0.6rem 1.2rem;
-      margin: 0.5rem;
-      border-radius: 10px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 16px;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
-    }
-
-    .audio-button:hover {
-      background: #66ccff;
-      color: #001122;
-      transform: scale(1.05);
-    }
-
-    #trackName {
-      margin-top: 0.5rem;
-      color: #aaccee;
-      font-size: 0.95rem;
-    }
-
     .section {
       padding: 2rem 1.5rem 3rem;
       max-width: 800px;
@@ -81,7 +45,6 @@
       background: rgba(0, 17, 34, 0.6);
       box-shadow: 0 0 30px #66ccff, 0 0 60px #3399ffaa;
     }
-
     .section h2 {
       color: #66ccff;
       font-size: 1.8rem;
@@ -89,23 +52,117 @@
       text-shadow: 0 0 5px #3399ff;
       font-weight: 700;
     }
-
-    .quote {
-      font-style: italic;
-      color: #aaccee;
-      margin: 2rem 0;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-
-    li::before {
-      content: "✓ ";
+    .link {
+      display: block;
+      background: rgba(102, 204, 255, 0.1);
       color: #66ccff;
+      padding: 14px 20px;
+      margin: 15px auto;
+      text-decoration: none;
+      border: 2px solid #66ccff;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 700;
+      font-size: 18px;
+      max-width: 300px;
+      backdrop-filter: blur(5px);
+      cursor: pointer;
+      box-shadow: 0 0 10px #66ccff;
+      text-align: center;
     }
-
+    .link:hover {
+      background: #66ccff;
+      color: #001122;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #66ccffcc;
+    }
+    .pix-section {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: rgba(102, 204, 255, 0.12);
+      border-radius: 16px;
+      box-shadow: 0 0 20px #66ccff88, 0 0 50px #3399ff55;
+    }
+    .pix-section h2 {
+      font-size: 1.6rem;
+      color: #66ccff;
+      text-shadow: 0 0 10px #3399ff;
+      font-weight: 700;
+    }
+    .pix-section p {
+      color: #99ccff;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .pix-qr {
+      width: 150px;
+      height: 150px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #66ccff;
+      display: block;
+      margin: 20px auto;
+    }
+    .pix-key {
+      font-weight: bold;
+      color: #aaccee;
+      margin-top: 15px;
+      font-size: 14px;
+      word-break: break-word;
+      user-select: all;
+      cursor: text;
+      text-align: center;
+    }
+    .btn-verde {
+      display: none;
+      background-color: #39ff14;
+      color: #001100;
+      padding: 14px 30px;
+      font-weight: 700;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      box-shadow: 0 0 12px #39ff14, 0 0 25px #39ff14aa;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      display: inline-block;
+      text-align: center;
+    }
+    .btn-verde:hover {
+      background-color: #2ecc00;
+      color: #fff;
+      box-shadow: 0 0 20px #2ecc00;
+    }
+    #msgCopiadoEbook, #msgCopiadoCombo {
+      display: none;
+      color: #00ff88;
+      font-weight: 700;
+      margin-top: 15px;
+      text-align: center;
+    }
+    #audioControl {
+      margin: 2rem auto;
+      background: rgba(102, 204, 255, 0.1);
+      border: 2px solid #66ccff;
+      color: #66ccff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+      display: block;
+      max-width: 300px;
+      text-align: center;
+      user-select: none;
+    }
+    #audioControl:hover {
+      background: #66ccff;
+      color: #001122;
+      transform: scale(1.05);
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -113,59 +170,15 @@
       color: #88aabb;
       text-shadow: 0 0 5px #3399ff88;
     }
-
-    .access-link {
-      display: inline-block;
-      background: rgba(102, 204, 255, 0.1);
-      color: #66ccff;
-      padding: 1rem 2rem;
-      font-weight: 700;
-      font-size: 1.2rem;
-      text-decoration: none;
-      border: 2px solid #66ccff;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #66ccffcc;
-      transition: all 0.3s ease;
-      margin-top: 3rem;
-    }
-
-    .access-link:hover {
-      background: #66ccff;
-      color: #001122;
-      transform: scale(1.05);
-    }
-
-    .vip-benefits {
-      background: rgba(0, 18, 34, 0.8);
-      border-radius: 12px;
-      padding: 2rem;
-      margin-top: 3rem;
-      color: #bbddff;
-      box-shadow: 0 0 10px #3399ff;
-    }
-
-    .vip-benefits h3 {
-      color: #66ccff;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    .vip-benefits li::before {
-      content: "✔️ ";
-      color: #66ccff;
-    }
-
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 1.2s ease-out, transform 1.2s ease-out;
     }
-
     .fade-in.appear {
       opacity: 1;
       transform: translateY(0);
     }
-
     @media (max-width: 480px) {
       header h1 {
         font-size: 2rem;
@@ -173,109 +186,38 @@
       .section h2 {
         font-size: 1.4rem;
       }
-      .access-link {
+      .link, .btn-verde, #audioControl {
         font-size: 1rem;
         padding: 0.8rem 1.2rem;
+      }
+      .btn-verde {
+        max-width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
-<header class="fade-in">
+<header class="fade-in" role="banner">
   <h1>Hiperfoco</h1>
-  <p>10 minutos por dia que podem transformar sua mente, seu foco e sua vida.</p>
-
-  <div class="audio-controls fade-in">
-    <button id="audioControl" class="audio-button">Ativar Trilha Sonora 🎧</button>
-    <div id="trackName"></div>
-    <audio id="bgAudio" preload="auto" loop></audio>
-  </div>
+  <p>O Poder de 10 Minutos por Dia</p>
 </header>
 
-<div class="section fade-in">
-  <h2>📘 20 Capítulos.</h2>
-  <p>Este não é apenas um Ebook. É um método para transformar sua forma de viver, pensar e agir.</p>
-  <p class="quote">"A vida que você vive é o reflexo dos pensamentos que você cultiva."<br>— James Allen</p>
+<main class="section fade-in" role="main" aria-label="Conteúdos e Ofertas Hiperfoco">
+  <h2 class="fade-in">📘 Capítulos Gratuitos</h2>
+  <nav aria-label="Capítulos gratuitos">
+    <a class="link fade-in" href="https://ghostman2709.github.io/Capitulo-1/" target="_blank" rel="noopener noreferrer">Capítulo 1</a>
+    <a class="link fade-in" href="https://ghostman2709.github.io/Capitulo-2/" target="_blank" rel="noopener noreferrer">Capítulo 2</a>
+    <a class="link fade-in" href="https://ghostman2709.github.io/Capitulo-3/" target="_blank" rel="noopener noreferrer">Capítulo 3</a>
+    <a class="link fade-in" href="https://ghostman2709.github.io/Capitulo-4/" target="_blank" rel="noopener noreferrer">Capítulo 4</a>
+    <a class="link fade-in" href="https://ghostman2709.github.io/Capitulo-5/" target="_blank" rel="noopener noreferrer">Capítulo 5</a>
+  </nav>
 
-  <h2>🎧 Trilha Sonora do Foco</h2>
-  <p>Ative o som enquanto lê. Frequências que aumentam seu estado de presença e clareza mental.</p>
+  <h2 class="fade-in">🎧 Trilha Sonora de Foco</h2>
+  <button id="audioControl" class="fade-in" aria-pressed="false" aria-label="Ativar Trilha Sonora de Foco">Ativar Trilha Sonora 🎧</button>
+  <audio id="bgAudio" src="audio.mp3" loop aria-hidden="true"></audio>
 
-  <h2>📘 O que você recebe:</h2>
-  <ul>
-    <li>20 capítulos transformadores</li>
-    <li>Exercícios mentais diários</li>
-    <li>Áudios com frequências mentais</li>
-    <li>Frases que despertam ação</li>
-    <li>Acesso ao Grupo VIP</li>
-  </ul>
-
-  <div class="vip-benefits">
-    <h3>Benefícios Exclusivos do Grupo VIP</h3>
-    <ul>
-      <li>Acesso a livros em PDF</li>
-      <li>Audiobooks completos</li>
-      <li>Temas avançados sobre foco</li>
-      <li>Comunidade ativa para crescimento</li>
-      <li>Exercícios exclusivos</li>
-      <li>Assine o próximo capítulo com seu nome como coautor</li>
-    </ul>
-  </div>
-
-  <a href="https://ghostman2709.github.io/hyperfoco-/" target="_blank" class="access-link" rel="noopener noreferrer">
-    👉 Acesse o conteúdo aqui!
-  </a>
-</div>
-
-<footer class="fade-in">
-  © 2025 Projeto Hiperfoco. Todos os direitos reservados.
-</footer>
-
-<script>
-  const audio = document.getElementById('bgAudio');
-  const playBtn = document.getElementById('audioControl');
-  const trackName = document.getElementById('trackName');
-
-  const track = { name: 'Relaxamento Produtivo', file: 'audio4.mp3' };
-  let isPlaying = false;
-
-  function loadTrack() {
-    audio.src = track.file;
-    trackName.textContent = `🎵 Tocando: ${track.name}`;
-  }
-
-  playBtn.addEventListener('click', () => {
-    if (!isPlaying) {
-      loadTrack();
-      audio.play();
-      isPlaying = true;
-      playBtn.textContent = 'Parar Trilha Sonora ⏸️';
-    } else {
-      audio.pause();
-      isPlaying = false;
-      playBtn.textContent = 'Ativar Trilha Sonora 🎧';
-      trackName.textContent = '';
-    }
-  });
-
-  audio.addEventListener('ended', () => {
-    isPlaying = false;
-    playBtn.textContent = 'Ativar Trilha Sonora 🎧';
-    trackName.textContent = '';
-  });
-
-  const fadeIns = document.querySelectorAll('.fade-in');
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('appear');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  fadeIns.forEach(el => appearOnScroll.observe(el));
-</script>
-
-</body>
-</html>
+  <section class="pix-section fade-in" id="pixEbook" aria-labelledby="ebookTitle">
+    <h2 id="ebookTitle">📗 Ebook Completo R$19,99</h2>
+    <p>Pagamento via Pix para liberar capítulos 6 a 20.</p>
+    <img class="pix-qr" src="qrcode-pix-erico.png" alt="QR Code para pagamento Pix do Ebook de
